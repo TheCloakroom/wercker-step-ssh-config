@@ -16,3 +16,4 @@ ssh-add ~/.ssh/id_rsa
 touch ~/.ssh/config
 chmod 644 ~/.ssh/config
 echo -e "ForwardAgent yes" >> ~/.ssh/config
+echo -e "BatchMode yes" >> ~/.ssh/config
