@@ -1,5 +1,5 @@
 name: ssh-config
-version: 0.0.5
+version: 0.0.6
 description: Configures the SSH client to use and forward DEPLOY_KEY
 properties:
   additional_hosts:

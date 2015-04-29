@@ -11,6 +11,8 @@ chmod 644 ~/.ssh/known_hosts
 ssh-keyscan github.com "$WERCKER_SSH_CONFIG_ADDITIONAL_HOSTS" >> ~/.ssh/known_hosts
 echo -e $DEPLOY_KEY_PRIVATE > ~/.ssh/id_rsa
 chmod 600 ~/.ssh/id_rsa
+echo -e $DEPLOY_KEY_PUBLIC > ~/.ssh/id_rsa.pub
+chmod 644 ~/.ssh/id_rsa.pub
 eval `ssh-agent -s`
 ssh-add ~/.ssh/id_rsa
 touch ~/.ssh/config
