@@ -1,3 +1,7 @@
 name: ssh-config
-version: 0.0.3
+version: 0.0.4
 description: Configures the SSH client to use and forward DEPLOY_KEY
+properties:
+  additional_hosts:
+    type: string
+    required: false

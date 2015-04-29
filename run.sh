@@ -8,7 +8,7 @@ fi
 mkdir -p ~/.ssh
 touch ~/.ssh/known_hosts
 chmod 644 ~/.ssh/known_hosts
-ssh-keyscan github.com >> ~/.ssh/known_hosts
+ssh-keyscan github.com "$WERCKER_SSH_CONFIG_ADDITIONAL_HOSTS" >> ~/.ssh/known_hosts
 echo -e $DEPLOY_KEY_PRIVATE > ~/.ssh/id_rsa
 chmod 600 ~/.ssh/id_rsa
 eval `ssh-agent -s`
