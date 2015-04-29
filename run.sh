@@ -1,10 +1,7 @@
-if [ ! -n "$DEPLOY_KEY" ]; then
-  error 'Please add a DEPLOY_KEY to your Wercker pipeline keys'
-  exit 1
-fi
+#!/bin/sh
 
 if [ ! -n "$DEPLOY_KEY_PRIVATE" ]; then
-  error 'Cannot find your private key from DEPLOY_KEY_PRIVATE, check your Wercker pipeline setup'
+  error 'Cannot read your private key from DEPLOY_KEY_PRIVATE. Check that you have a key pair named DEPLOY_KEY in your Wercker pipeline settings'
   exit 1
 fi
 
